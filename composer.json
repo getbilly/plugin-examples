@@ -1,0 +1,22 @@
+{
+	"name": "getbilly/plugin-examples",
+ 	"keywords": ["wordpress", "plugin", "orm", "eloquent", "sql", "framework"],
+    "homepage": "https://github.com/getbilly/plugin-examples",
+    
+	"authors": [
+        {
+            "name": "Jack Whiting",
+            "email": "hi@jackwhiting.co.uk"
+        }
+    ],
+
+    "require": {
+        "getbilly/framework" : "dev-master"
+    },
+
+	"autoload": {
+    	"psr-4": {
+			"PluginExample\\": "app/"
+		}
+	}
+}
