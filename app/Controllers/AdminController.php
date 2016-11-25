@@ -1,6 +1,7 @@
 <?php namespace PluginExample\Controllers;
 
 use PluginExample\View;
+use PluginExample\Models\Demo;
 
 class AdminController
 {
@@ -25,11 +26,18 @@ class AdminController
 	public function menu_render() 
 	{
 		$title = 'Hello World';
-		$content = "Hey Billy, You're so Fine";
+		$emails = Demo::all();
 
 		return View::render('@PluginExample/example.twig', [
 			'title' 	=> $title,
-			'content'   => $content
+			'emails'    => $emails
+		]);
+	}
+
+	public function create_test_emails()
+	{
+		Demo::create([
+			'email' => 'example@test.com'
 		]);
 	}
 }

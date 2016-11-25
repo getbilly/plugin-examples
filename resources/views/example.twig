@@ -1,2 +1,7 @@
 <h2>{{ title }}</h2>
-<p>{{ content }}</p>
+
+<ul>
+{% for e in emails %}
+	<li>{{ e.email }}</li>
+{% endfor %}
+</ul>
